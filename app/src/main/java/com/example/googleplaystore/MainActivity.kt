@@ -17,8 +17,35 @@ class MainActivity : AppCompatActivity() {
         val items = arrayListOf<ItemModel>()
         repeat(10) {
             val index = it + 1
+            val appName = when (index) {
+                1 -> "Reddit"
+                2 -> "Facebook"
+                3 -> "Memrise"
+                4 -> "Notion"
+                5 -> "Riki"
+                6 -> "Tiktok"
+                7 -> "Ghost"
+                8 -> "Netflix"
+                9 -> "Grab"
+                10 -> "Sportify"
+                else -> "DefaultAppName"
+            }
+
+            val appRate = when (index) {
+                1 -> "4.1"
+                2 -> "4.2"
+                3 -> "4.6"
+                4 -> "3.2"
+                5 -> "4.5"
+                6 -> "3.9"
+                7 -> "4.7"
+                8 -> "4.5"
+                9 -> "4.0"
+                10 -> "4.3"
+                else -> "4.9"
+            }
             items.add(ItemModel(
-                resources.getIdentifier("img$index", "drawable", packageName), "FaceBook", "4.1"
+                resources.getIdentifier("img$index", "drawable", packageName), appName, appRate
             ))
         }
 
